@@ -1,8 +1,10 @@
 <template>
+  
   <div class="card animate-slide-up">
     <h2 class="text-2xl font-bold text-gray-900 mb-6">Nueva Reserva</h2>
     
     <!-- Filtro por categoría -->
+    
     <div class="mb-6">
       <label class="form-label">Categoría de Evento</label>
       <select
@@ -87,6 +89,7 @@
     </div>
 
     <form @submit.prevent="submitReservation" class="space-y-6">
+      
       <!-- Información personal -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
