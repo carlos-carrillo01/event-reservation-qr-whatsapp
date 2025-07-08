@@ -148,13 +148,17 @@
             type="checkbox"
             class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 rounded focus:ring-green-500"
           />
+          
           <label for="sendWhatsApp" class="text-sm font-medium text-gray-900">
             📱 Enviar confirmación automáticamente por WhatsApp
           </label>
+          
         </div>
+        
         <p class="text-xs text-gray-600 mt-2 ml-7">
           Al crear la reserva, se abrirá WhatsApp automáticamente con el mensaje de confirmación listo para enviar
         </p>
+        
       </div>
 
       <button
