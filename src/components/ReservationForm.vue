@@ -300,4 +300,5 @@ const submitReservation = async () => {
     alert('Error al crear la reserva. Por favor, inténtalo de nuevo.');
   }
 };
+  
 </script>
