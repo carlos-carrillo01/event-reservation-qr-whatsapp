@@ -6,6 +6,7 @@
         Total: {{ stats.total }} | Confirmadas: {{ stats.confirmed }}
       </div>
     </div>
+    
 
     <!-- Buscador por email -->
     <div class="mb-6">
@@ -18,14 +19,15 @@
         @input="searchReservations"
       />
     </div>
+    
 
     <!-- Lista de reservas -->
     <div v-if="filteredReservations.length > 0" class="space-y-4">
       <div
         v-for="reservation in filteredReservations"
         :key="reservation.id"
-        class="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow"
-      >
+        class="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+        
         <div class="flex items-start justify-between mb-3">
           <div>
             <h3 class="font-semibold text-gray-900">{{ reservation.eventName }}</h3>
@@ -40,6 +42,7 @@
             {{ getStatusText(reservation.status) }}
           </span>
         </div>
+        
 
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm text-gray-600 mb-4">
           <div class="flex items-center gap-1">
@@ -134,6 +137,7 @@
             <span class="font-medium">{{ selectedReservation.time }}</span>
           </div>
         </div>
+        
 
         <!-- QR Code -->
         <div v-if="selectedReservation.qrCode" class="text-center mb-6">
@@ -190,6 +194,7 @@ const searchReservations = () => {
   // La búsqueda se hace automáticamente con el computed
 };
 
+  
 const formatDate = (dateString: string): string => {
   const date = new Date(dateString);
   return date.toLocaleDateString('es-ES', {
@@ -223,4 +228,5 @@ const cancelReservation = (id: string) => {
     cancelRes(id);
   }
 };
+  
 </script>
